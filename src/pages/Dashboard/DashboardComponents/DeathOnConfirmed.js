@@ -9,12 +9,12 @@ ReactFC.fcRoot(FusionCharts, Charts, FusionTheme);
 const dataSource = {
   chart: {
     caption:
-      "Confirmed and probable cases by suspected location of infection (imported vs local transmission)",
+      "COVID-19 deaths based on case confirmation status (confirmed, inconclusive, suspected/not tested)",
     yaxisname: "",
     subcaption: "Trainningland",
     flatscrollbars: "5",
     scrollheight: "10",
-    plottooltext: " COVID-19 $seriesName $label: <b>$dataValue</b>",
+    plottooltext: " $seriesName: <b>$dataValue</b>",
     theme: "fusion",
     //styles
     widthPercent: 5,
@@ -69,31 +69,48 @@ const dataSource = {
   ],
   dataset: [
     {
-      seriesname: "COVID-19 Cas importés",
+      seriesname: "COVID-19 Death( confirmed case)",
       data: [
         { id: "2020W44", value: "0" },
         { id: "2020W45", value: "0" },
-        { id: "2020W46", value: "1.0" },
+        { id: "2020W46", value: "0" },
         { id: "2020W47", value: "0" },
         { id: "2020W48", value: "0" },
-        { id: "2020W49", value: "1.0" },
+        { id: "2020W49", value: "0" },
         { id: "2020W50", value: "0" },
         { id: "2020W51", value: "0" },
         { id: "2020W52", value: "0" },
         { id: "2020W53", value: "0" },
         { id: "2021W1", value: "0" },
-        { id: "2021W2", value: "0" },
+        { id: "201W2", value: "0" },
       ],
     },
     {
-      seriesname: "COVID-19 Cas de transmission locale",
+      seriesname: "COVID-19 Death( probable case)",
       data: [
-        { id: "2020W44", value: "1.0" },
+        { id: "2020W44", value: "0.0" },
         { id: "2020W45", value: "0.0" },
         { id: "2020W46", value: "0.0" },
-        { id: "2020W47", value: "1.0" },
+        { id: "2020W47", value: "0.0" },
         { id: "2020W48", value: "0.0" },
-        { id: "2020W49", value: "2.0" },
+        { id: "2020W49", value: "1.0" },
+        { id: "2020W50", value: "0.0" },
+        { id: "2020W51", value: "0.0" },
+        { id: "2020W52", value: "0.0" },
+        { id: "2020W53", value: "0.0" },
+        { id: "2021W1", value: "0.0" },
+        { id: "2021W2", value: "0.0" },
+      ],
+    },
+    {
+      seriesname: "COVID-19 Death (case suspects, non tested)",
+      data: [
+        { id: "2020W44", value: "0.0" },
+        { id: "2020W45", value: "0.0" },
+        { id: "2020W46", value: "0.0" },
+        { id: "2020W47", value: "0.0" },
+        { id: "2020W48", value: "0.0" },
+        { id: "2020W49", value: "0.0" },
         { id: "2020W50", value: "0.0" },
         { id: "2020W51", value: "0.0" },
         { id: "2020W52", value: "0.0" },
@@ -108,12 +125,13 @@ const dataSource = {
 const chartConfig = {
   type: "scrollstackedcolumn2d",
   width: "800",
-  height: "50%",
+  height: "100%",
   dataFormat: "json",
   dataSource,
 };
 
-export const TotalConfirmedProbable = () => {
-  // const [data, setData] = useState();
+export const DeathOnConfirmed = () => {
+  //   const [data, setData] = useState();
+
   return <ReactFC {...chartConfig} />;
 };
