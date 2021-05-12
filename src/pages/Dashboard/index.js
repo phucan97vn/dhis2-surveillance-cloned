@@ -1,16 +1,10 @@
-import React, {useState, useMemo} from "react";
+import React from "react";
 import {SuspectedCase} from "./DashboardComponents/SuspectedCase";
 import {ConfirmedProbableCases} from "./DashboardComponents/ConfirmedProbableCases";
 import {WeeklyDeaths} from "./DashboardComponents/WeeklyDeaths";
 import {ImportedLocalCases} from "./DashboardComponents/ImportedLocalCases";
 import {ConfirmedCasesLast14days} from "./DashboardComponents/ConfirmedCasesLast14days";
 import {SingleValueView} from "./DashboardComponents/SingleValueView";
-// import { connect } from 'react-redux'
-
-// const dataConfig = (chartType,config) => {
-//     switch(chartType):
-//     case:
-// }
 
 const singleValueAPIList = [
     {
@@ -35,10 +29,12 @@ const singleValueAPIList = [
     }
 ]
 
-const chartType = {stack: "scrollstackedcolumn2d", single: "scrollColumn2d"};
+// const chartType = {
+//     'stack': "scrollstackedcolumn2d",
+//     'single': "scrollColumn2d"
+// };
 
 export const Dashboard = () => {
-    // const [fakeChartData] = useState(dataSource);
 
     //TODO READ TYPE FROM RESPONSE DESCRIPTION API TO DETERMINE THE CHART TYPE.
 
@@ -60,7 +56,6 @@ export const Dashboard = () => {
                 <div className="header">
                     <h1>DHIS 2 - Dashboard</h1>
                 </div>
-                {/* <SearchBar /> */}
                 <div className="titlebar-wrapper">
                     <h2>01. COVID-19 Surveillance (Tracker)</h2>
                 </div>
