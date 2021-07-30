@@ -1,6 +1,6 @@
 export const AccountInfo = {
     auth: {
-        username: "COVID",
+        username: "DEMO",
         password: "StopCovid19!",
     }
 }
