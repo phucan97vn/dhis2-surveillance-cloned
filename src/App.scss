@@ -1,0 +1,35 @@
+.App {
+  background-color: #f3f5f7;
+}
+
+.container-fluid {
+  // padding: 15px;
+}
+
+.view {
+  text-align: center;
+  background-color: #fff;
+  margin: 4px;
+  p {
+    font-size: 12px;
+  }
+  .description {
+    margin-bottom: 0;
+  }
+  .result {
+    padding-bottom: 4px;
+    font-size: 36px;
+  }
+  .dashboard-item-header-title {
+    font-size: 15px;
+    color: #3a3a3a;
+    text-overflow: ellipsis;
+    text-align: left;
+    span {
+      font-weight: 700;
+      overflow: hidden;
+      max-width: 85%;
+      white-space: nowrap;
+    }
+  }
+}
